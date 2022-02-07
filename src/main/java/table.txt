@@ -1,0 +1,17 @@
+create table users (
+    id varchar2(30) primary key,
+    pw varchar2(30) not null,
+    name varchar2(30) not null,
+    email varchar2(30),
+    address varchar2(100),
+    regdate date default sysdate
+);
+
+create table board (
+    bno number(10) primary key,
+    writer varchar2(50) not null,
+    title varchar(300) not null,
+    content varchar(2000),
+    regdate date default sysdate,
+    hit number(10) default 0
+);1
